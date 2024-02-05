@@ -20,7 +20,7 @@ export default function Projects() {
                 <div className="flex-wrap-list">
                   {el.workedOn.map((workItem) => (
                     <span className="check">
-                      <span className="dark-text">{workItem}</span>
+                      <span className="light-text">{workItem}</span>
                     </span>
                   ))} 
                 </div>
@@ -31,26 +31,24 @@ export default function Projects() {
                   {el.techs.map((tech) => (
                     <div className="tech-item">
                       <img src={tech.icon} className="tiny-icon-image" alt={tech.name} />
-                      <span className="light-text">{tech.name}</span>
+                      <span className="dark-text">{tech.name}</span>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-            <a href={el.codeLink} target="_blank" rel="noopener noreferrer">
-              <button className="primary-btn">
-                <img src={gitHub} className="mid-icon-image" alt="GitHub" />
-                <span className="dark-text">Go to Github</span>
-              </button>
+            <a href={el.codeLink} className="primary-btn" target="_blank" rel="noopener noreferrer">
+              <img src={gitHub} className="mid-icon-image" alt="GitHub" />
+              <span className="light-text">Go to Github</span>
             </a>
           </div>
         </div>
       ))}
       <div className="flex-content">
-        <button className="yellow-btn">
+        <a href="https://github.com/svyatoslavkk" className="yellow-btn" target="_blank" rel="noopener noreferrer">
           <img src={gitHub} className="mid-icon-image" alt="GitHub" />
-          <span className="dark-text">See Github</span>
-        </button>
+          <span className="light-text">See Github</span>
+        </a>
       </div>
     </section>
   )

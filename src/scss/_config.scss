@@ -1,5 +1,6 @@
 $highlight-color: #f2ae07;
 $light-white: #effafa;
+$light-gray: #a1b9b9;
 $soft-dark: #110f0f;
 $secondary-dark: #221e1e;
 
@@ -10,4 +11,5 @@ $secondary-dark: #221e1e;
   justify-content: center;
   border-radius: 2rem;
   padding: 0.4rem;
+  transition: 0.1s ease;
 }

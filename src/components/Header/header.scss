@@ -1,0 +1,37 @@
+.header {
+  position: fixed;
+  top: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $secondary-dark;
+  box-shadow: 0px 1px 12px rgba(0, 0, 0, 1);
+  border-radius: 2rem;
+  padding: 0.8rem;
+}
+
+.header-btn {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: transparent;
+  .light-text {
+    display: none;
+  }
+}
+
+.contact-btn {
+  @include primary-button-styles;
+}
+
+@media (min-width: 675px) {
+  .header-btn {
+    .light-text {
+      display: flex;
+    }
+  }
+}

@@ -6,21 +6,37 @@
   letter-spacing: 0.3px;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 92, 92, 0.7);
+  border-radius: 10px;
+}
+
 body {
   background-color: #100f10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 img {
   object-fit: cover;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   line-height: 2.3rem;
+}
+
+h3, h4, h5, h6 {
+  line-height: 1.5rem;
 }
 
 button {
   border: none;
   outline: none;
+  transition: 0.1s ease;
   cursor: pointer;
 }
 
@@ -28,31 +44,39 @@ a {
   text-decoration: none;
 }
 
-.container {
+.page {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
   width: 100%;
+  max-width: 900px;
   padding: 1rem;
+  margin-top: 72px;
 }
 
 .default-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1.5rem;
   width: 100%;
 }
 
 .title {
   color: $highlight-color;
-  font-size: 32px;
+  font-size: 36px;
   text-align: center;
   letter-spacing: 1px;
 }
 
 .pre-title {
   color: #daccda;
+}
+
+.pre-title-dark {
+  font-size: 18px;
+  color: $soft-dark;
 }
 
 .pre-title-dark {
@@ -64,16 +88,34 @@ a {
   font-size: 28px;
 }
 
-.light-text {
+.weight-light-text {
   color: $soft-dark;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.light-text {
+  color: $light-white;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.gray-text {
+  color: $light-gray;
   font-size: 13px;
   font-weight: 500;
 }
 
 .dark-text {
-  color: $light-white;
+  color: $soft-dark;
   font-size: 14px;
   font-weight: 500;
+}
+
+.dark-text-bolder {
+  color: $soft-dark;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .album-image {
@@ -99,8 +141,20 @@ a {
   border-radius: 0.25rem;
 }
 
+.big-circle-icon-image {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
 .flex-content {
   display: flex;
+}
+
+.flex-wrap-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .column-content {
@@ -112,5 +166,8 @@ a {
 .primary-btn {
   @include primary-button-styles;
   background-color: #66666644;
-  border: 1px solid #9ab0d4;
+  border: 2px solid #9ab0d4;
+  &:hover {
+    background-color: #88888866;
+  }
 }

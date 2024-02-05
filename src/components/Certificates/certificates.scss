@@ -26,13 +26,15 @@
 .school-info {
   align-items: center;
   gap: 0.5rem;
-  padding: 0.1rem;
+  padding: 0.1rem 1rem 0.1rem 0.1rem;
   border-radius: 2rem;
   background-color: $soft-dark;
 }
 
 .upper {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -45,5 +47,22 @@
   border-radius: 2rem;
   padding: 0.4rem 0.8rem;
   background-color: #d9d8d744;
-  border: 1px solid $soft-dark;
+  border: 2px solid $soft-dark;
+  transition: 0.1s ease;
+  &:hover {
+    background-color: #e8e4e4;
+  }
+}
+
+@media (min-width: 300px) {
+  .upper {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 850px) {
+  .certificates-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
