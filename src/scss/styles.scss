@@ -14,9 +14,14 @@ img {
   object-fit: cover;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 2.3rem;
+}
+
 button {
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 a {
@@ -36,6 +41,7 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .title {
@@ -56,6 +62,18 @@ a {
 .mid-title {
   color: $light-white;
   font-size: 28px;
+}
+
+.light-text {
+  color: $soft-dark;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.dark-text {
+  color: $light-white;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .album-image {
@@ -92,12 +110,7 @@ a {
 } 
 
 .primary-btn {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2rem;
-  padding: 0.4rem;
+  @include primary-button-styles;
   background-color: #66666644;
   border: 1px solid #9ab0d4;
 }

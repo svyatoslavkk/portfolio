@@ -1,0 +1,4 @@
+.resume-btn {
+  @include primary-button-styles;
+  background-color: $highlight-color;
+}

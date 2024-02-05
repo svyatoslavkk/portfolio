@@ -1,3 +1,13 @@
 $highlight-color: #f2ae07;
 $light-white: #effafa;
 $soft-dark: #110f0f;
+$secondary-dark: #221e1e;
+
+@mixin primary-button-styles {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  padding: 0.4rem;
+}

@@ -24,7 +24,7 @@ export default function Certificates() {
             </div>
             <div className="flex-content">
               <a href={el.link} className="view-btn" target="_blank" rel="noopener noreferrer">
-                <VisibilityIcon fontSize="medium" sx={{ color: "#110f0f" }} />
+                <VisibilityIcon sx={{ color: "#110f0f" }} />
                 <span className="light-text">View</span>
               </a>
             </div>

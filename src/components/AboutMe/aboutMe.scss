@@ -1,0 +1,19 @@
+.text-block {
+  padding: 1rem;
+  background-color: $secondary-dark;
+  border-radius: 2rem;
+}
+
+.about-img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 400px;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}

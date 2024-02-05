@@ -37,25 +37,8 @@
   padding: 0.4rem;
 }
 
-.light-text {
-  color: $soft-dark;
-  font-size: 13px;
-  font-weight: 500;
-}
-
-.dark-text {
-  color: $light-white;
-  font-size: 14px;
-  font-weight: 500;
-}
-
 .yellow-btn {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2rem;
-  padding: 0.4rem;
+  @include primary-button-styles;
   background-color: #efb62f44;
   border: 1px solid #bc9238;
 }
