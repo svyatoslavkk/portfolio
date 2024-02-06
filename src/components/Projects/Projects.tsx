@@ -1,14 +1,36 @@
+import { useState, useEffect, RefObject } from 'react';
+import { useSpring, animated } from 'react-spring';
 import { projects } from '../../constants/constants';
 import { IProject } from '../../types/types';
 
-export default function Projects() {
+export default function Projects({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const fadeInAnimation = useSpring({
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? 'translateY(0)' : 'translateY(-100px)',
+    config: { tension: 300, friction: 50 },
+  });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 200);
+  }, [isVisible, innerRef]);
+
   const gitHub = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1200px-GitHub_Invertocat_Logo.svg.png";
   
   return (
+    <animated.div
+      ref={innerRef}
+      style={{
+        ...fadeInAnimation,
+    }}
+    >
     <section className="default-section">
       <h2 className="title">Projects I've<br /> Worked on</h2>
       {projects.map((el: IProject) => (
-        <div className="card">
+        <div className="card" style={{backgroundColor: el.bgColor }}>
           <div className="album-image-block">
             <img src={el.screenshots} className="album-image" alt={el.name} />
           </div>
@@ -51,5 +73,6 @@ export default function Projects() {
         </a>
       </div>
     </section>
+    </animated.div>
   )
 }

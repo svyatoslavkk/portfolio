@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import AboutMe from './components/AboutMe/AboutMe';
 import Certificates from './components/Certificates/Certificates';
 import ConnectWithMe from './components/ConnectWithMe/ConnectWithMe';
@@ -7,16 +8,26 @@ import Skills from './components/Skills/Skills';
 import TeamDevelopment from './components/TeamDevelopment/TeamDevelopment';
 
 function App() {
+  const skillsRef = useRef(null);
+  const connectWithMeRef = useRef(null);
+  const certificatesRef = useRef(null);
+  const projectsRef = useRef(null);
+  const teamDevRef = useRef(null);
 
   return (
       <div className="page">
-        <Header />
+        <Header 
+          skillsRef={skillsRef} 
+          connectWithMeRef={connectWithMeRef} 
+          certificatesRef={certificatesRef} 
+          projectsRef={projectsRef}
+        />
         <AboutMe />
-        <Projects />
-        <TeamDevelopment />
-        <Certificates />
-        <Skills />
-        <ConnectWithMe />
+        <Projects innerRef={projectsRef} />
+        <TeamDevelopment innerRef={teamDevRef} />
+        <Certificates innerRef={certificatesRef} />
+        <Skills innerRef={skillsRef} />
+        <ConnectWithMe innerRef={connectWithMeRef} />
       </div>
   )
 }

@@ -12,6 +12,7 @@ export type ICertificate = {
 
 export type IProject = {
   screenshots: string;
+  bgColor: string;
   name: string;
   workedOn: string[];
   techs: ITech[];

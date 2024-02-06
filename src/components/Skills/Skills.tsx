@@ -1,8 +1,42 @@
+import { useState, useEffect } from 'react';
+import { useSpring, animated } from 'react-spring';
 import { technologies, tools } from "../../constants/constants";
 import FileDownloadRoundedIcon from '@mui/icons-material/FileDownloadRounded';
+import { RefProps } from '../../types/interfaces';
 
-export default function Skills() {
+export default function Skills({ innerRef }: RefProps) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const fadeInAnimation = useSpring({
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? 'translateX(0)' : 'translateX(10%)',
+    config: { tension: 300, friction: 50 },
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const elementPosition = innerRef.current?.offsetTop || 0;
+
+      if (scrollPosition > elementPosition && !isVisible) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isVisible, innerRef]);
+  
   return (
+    <animated.section
+    ref={innerRef}
+    style={{
+      ...fadeInAnimation,
+    }}
+    >
     <section className="default-section">
       <h2 className="title">Skills</h2>
       <div className="column-content" style={{width: "100%"}}>
@@ -32,5 +66,6 @@ export default function Skills() {
         <span className="dark-text">Resume</span>
       </button>
     </section>
+    </animated.section>
   )
 }

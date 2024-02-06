@@ -26,19 +26,19 @@
 }
 
 .tech-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
-  border-radius: 2rem;
-  background-color: #e6e9ec;
+  @include flex-item-styles;
+  background-color: #e0d8d0;
   padding: 0.4rem;
 }
 
 .yellow-btn {
   @include primary-button-styles;
-  background-color: #efb62f44;
+  background-color: $transparent-yellow;
   border: 2px solid #bc9238;
+  transition: 0.1s ease;
+  &:hover {
+    background-color: #efb62f66;
+  }
 }
 
 @media (min-width: 850px) {

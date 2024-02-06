@@ -1,10 +1,44 @@
+import { useState, useEffect } from 'react';
+import { useSpring, animated } from 'react-spring';
 import { teamDevelopmentExperience } from '../../constants/constants';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import CheckBoxRoundedIcon from '@mui/icons-material/CheckBoxRounded';
 import GpsFixedRoundedIcon from '@mui/icons-material/GpsFixedRounded';
+import { RefProps } from '../../types/interfaces';
 
-export default function TeamDevelopment() {
+export default function TeamDevelopment({ innerRef }: RefProps) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const fadeInAnimation = useSpring({
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? 'translateX(0)' : 'translateX(10%)',
+    config: { tension: 300, friction: 50 },
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      const elementPosition = innerRef.current?.offsetTop || 0;
+
+      if (scrollPosition > elementPosition && !isVisible) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isVisible]);
+
   return (
+    <animated.section
+      ref={innerRef}
+      style={{
+        ...fadeInAnimation,
+      }}
+    >
     <section className="default-section">
       <h2 className="title">Team Development Experience</h2>
       <div className="column-content" style={{width: "100%"}}>
@@ -46,5 +80,6 @@ export default function TeamDevelopment() {
         ))}
       </div>
     </section>
+    </animated.section>
   )
 }
