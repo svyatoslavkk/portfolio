@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { technologies, tools } from "../../constants/constants";
-import FileDownloadRoundedIcon from '@mui/icons-material/FileDownloadRounded';
 import { RefProps } from '../../types/interfaces';
+import CVBtn from '../ui/buttons/CVBtn';
 
 export default function Skills({ innerRef }: RefProps) {
   const [isVisible, setIsVisible] = useState(false);
@@ -61,10 +61,7 @@ export default function Skills({ innerRef }: RefProps) {
           ))}
         </div>
       </div>
-      <button className="resume-btn">
-        <FileDownloadRoundedIcon sx={{ color: "#110f0f" }} />
-        <span className="dark-text">Resume</span>
-      </button>
+      <CVBtn />
     </section>
     </animated.section>
   )

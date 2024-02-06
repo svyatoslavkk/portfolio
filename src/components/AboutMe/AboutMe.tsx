@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
-import FileDownloadRoundedIcon from '@mui/icons-material/FileDownloadRounded';
 import { aboutDescription, nameSurname, positionTitle } from '../../constants/constants';
+import CVBtn from '../ui/buttons/CVBtn';
 
 export default function AboutMe() {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,10 +26,7 @@ export default function AboutMe() {
         <h2 className="title">{nameSurname}</h2>
         <h3 className="pre-title">{positionTitle}</h3>
         <div className="flex-content">
-          <button className="resume-btn">
-            <FileDownloadRoundedIcon sx={{ color: "#110f0f" }} />
-            <span className="dark-text">Resume</span>
-          </button>
+          <CVBtn />
         </div>
       </div>
       <h2 className="title">About Me</h2>

@@ -6,6 +6,7 @@ import Header from './components/Header/Header';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import TeamDevelopment from './components/TeamDevelopment/TeamDevelopment';
+import ColorOverlay from './components/ColorOverlay/ColorOverlay';
 
 function App() {
   const skillsRef = useRef(null);
@@ -28,6 +29,7 @@ function App() {
         <Certificates innerRef={certificatesRef} />
         <Skills innerRef={skillsRef} />
         <ConnectWithMe innerRef={connectWithMeRef} />
+        <ColorOverlay />
       </div>
   )
 }

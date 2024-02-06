@@ -21,6 +21,10 @@ export const projects = [
         name: "React"
       },
       {
+        icon: "https://www.bairesdev.com/wp-content/uploads/2020/07/redux.svg",
+        name: "Redux Toolkit"
+      },
+      {
         icon: "https://sass-lang.com/assets/img/styleguide/seal-color.png",
         name: "Sass"
       },
@@ -48,6 +52,10 @@ export const projects = [
       {
         icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/640px-React_Logo_SVG.svg.png",
         name: "React"
+      },
+      {
+        icon: "https://www.bairesdev.com/wp-content/uploads/2020/07/redux.svg",
+        name: "Redux Toolkit"
       },
       {
         icon: "https://sass-lang.com/assets/img/styleguide/seal-color.png",
@@ -138,7 +146,7 @@ export const technologies = [
     name: "Sass"
   },
   {
-    icon: "https://e7.pngegg.com/pngimages/669/447/png-clipart-redux-react-javascript-freecodecamp-npm-others-miscellaneous-purple-thumbnail.png",
+    icon: "https://www.bairesdev.com/wp-content/uploads/2020/07/redux.svg",
     name: "Redux Toolkit"
   },
   {
