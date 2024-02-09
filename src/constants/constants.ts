@@ -71,6 +71,7 @@ export const projects = [
       },
     ],
     codeLink: "https://github.com/svyatoslavkk/gifs-finder/tree/dev",
+    demoLink: "https://gifs-finder.vercel.app/signup",
   },
   {
     screenshots: musicHub,
@@ -100,6 +101,7 @@ export const projects = [
       },
     ],
     codeLink: "https://github.com/svyatoslavkk/music-hub/tree/dev",
+    demoLink: "https://music-hub-k.vercel.app/signup",
   },
 ];
 

@@ -17,4 +17,5 @@ export type IProject = {
   workedOn: string[];
   techs: ITech[];
   codeLink: string;
+  demoLink?: string;
 }

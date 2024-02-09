@@ -164,12 +164,19 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-} 
+}
+
+.buttons-content {
+  display: flex;
+  width: 100%;
+  gap: 0.25rem;
+}
 
 .primary-btn {
   @include primary-button-styles;
   background-color: #66666644;
   border: 2px solid #9ab0d4;
+  width: 100%;
   &:hover {
     background-color: #88888866;
   }
