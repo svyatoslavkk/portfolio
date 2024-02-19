@@ -42,7 +42,7 @@ export const projects = [
   {
     screenshots: gifsFinder,
     bgColor: "#c75f78",
-    name: "Gifs Finder",
+    name: "Gif Hub",
     workedOn: ["Website"],
     techs: [
       {
@@ -70,13 +70,13 @@ export const projects = [
         name: "Git"
       },
     ],
-    codeLink: "https://github.com/svyatoslavkk/gifs-finder/tree/dev",
+    codeLink: "https://github.com/svyatoslavkk/gif-hub/tree/dev",
     demoLink: "https://gifs-finder.vercel.app/signup",
   },
   {
     screenshots: musicHub,
     bgColor: "#6d2d6d",
-    name: "Music Hub",
+    name: "Sound Finder",
     workedOn: ["Website"],
     techs: [
       {
@@ -100,7 +100,7 @@ export const projects = [
         name: "Git"
       },
     ],
-    codeLink: "https://github.com/svyatoslavkk/music-hub/tree/dev",
+    codeLink: "https://github.com/svyatoslavkk/sound-finder/tree/dev",
     demoLink: "https://music-hub-k.vercel.app/signup",
   },
 ];

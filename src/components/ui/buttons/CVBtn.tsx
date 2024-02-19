@@ -1,5 +1,5 @@
 import FileDownloadRoundedIcon from '@mui/icons-material/FileDownloadRounded';
-import cvFile from '../../../assets/Svyatoslav Krivonos Jr Front End Developer.pdf';
+import cvFile from '../../../assets/Svyatoslav Krivonos Front End Developer.pdf';
 
 export default function CVBtn() {
 
